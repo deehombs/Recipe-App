@@ -17,13 +17,13 @@ const getVeg   = async () => {
   if (check) {
     setVeg(JSON.parse(check))
   } else {
-    const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=9eb9d0e95a03473ca8689db07ab5b738&number=12`);
+    const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=9eb9d0e95a03473ca8689db07ab5b738&number=12&tags=vegetarian`);
     const data = await api.json();
 
     localStorage.setItem('veg',JSON.stringify(data.recipes));
-    console.log (data.recipes);
-    setVeg(data.recipes);
     
+    setVeg(data.recipes);
+    console.log (data.recipes);
   }
    };
   
@@ -41,7 +41,7 @@ const getVeg   = async () => {
           }}>
           {veg.map ((recipe) => {
             return (
-              //FIX KEY'S FOR EACH RECIPE
+          
               <SplideSlide key = {recipe.id}>
               <Card>
                 <p> {recipe.title}</p>
