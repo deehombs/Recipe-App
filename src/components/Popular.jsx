@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {Splide, SplideSlide} from  "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-
-const myApiKey = '2929bb1566fe42468ca71edd961145f4'
+//my first apiKey for the mems
+//const myApiKey = '2929bb1566fe42468ca71edd961145f4'
 
 function Popular () {
     const [popular, setPopular] = useState([]);
@@ -14,11 +14,23 @@ function Popular () {
   }, []);
 
 const getPopular   = async () => {
-    const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=2929bb1566fe42468ca71edd961145f4&number=12`)
+
+  const check =localStorage.getItem('popular');
+
+  if (check) {
+    setPopular(JSON.parse(check))
+  } else {
+    const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=9eb9d0e95a03473ca8689db07ab5b738&number=12`);
     const data = await api.json();
-    console.log (data)
+
+    localStorage.setItem('popular',JSON.stringify(data.recipes));
+    console.log (data.recipes);
     setPopular(data.recipes);
-   }
+    
+  }
+   
+
+   };
   
   return (
     <div>
@@ -35,8 +47,8 @@ const getPopular   = async () => {
           {popular.map ((recipe) => {
             return (
               //FIX KEY'S FOR EACH RECIPE
-              <SplideSlide>
-              <Card key = {recipe.id}>
+              <SplideSlide key = {recipe.id}>
+              <Card>
                 <p> {recipe.title}</p>
                 <img src={recipe.img} alt = {recipe.title}/>
                 <Gradient/>
