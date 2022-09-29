@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import styled from "styled-components";
 import {Splide, SplideSlide} from  "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import {Link} from 'react-router-dom'
 
 //my first apiKey for the mems
 //const myApiKey = '2929bb1566fe42468ca71edd961145f4'
@@ -48,9 +49,11 @@ const getPopular   = async () => {
             return (
               <SplideSlide key = {recipe.id}>
               <Card>
+                <Link to={'/recipe/'+recipe.id}>
                 <p> {recipe.title}</p>
                 <img src={recipe.image} alt = {recipe.title}/>
                 <Gradient/>
+                </Link>
               </Card>
               </SplideSlide>
               );

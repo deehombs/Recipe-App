@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import styled from "styled-components";
 import {Splide, SplideSlide} from  "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { Link } from "react-router-dom";
 
 const Veg = () => {
   const [veg, setVeg] = useState([]);
@@ -44,9 +45,11 @@ const getVeg   = async () => {
           
               <SplideSlide key = {recipe.id}>
               <Card>
+                <Link to={'/recipe/'+recipe.id}>
                 <p> {recipe.title}</p>
                 <img src={recipe.image} alt = {recipe.title}/>
                 <Gradient/>
+                </Link>
               </Card>
               </SplideSlide>
               );
@@ -72,8 +75,8 @@ img {
   border-radius: 2rem;
   position: absolute;
   left: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 p  {
