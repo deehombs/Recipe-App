@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom'
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 function Searched () {
   const [searchedRecipes, setSearchedRecipes] = useState ([]);        

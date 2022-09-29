@@ -31,9 +31,9 @@ const getVeg   = async () => {
   return (
     <div>
          <Wrapper>
-          <h3>Vegetarian Picks</h3>
+          <h3>Trending Vegetarian Dishes</h3>
           <Splide options={{
-            perPage: 3,
+            perPage: ,
             arrows: true,
             pagination: true, 
             drag: 'free',

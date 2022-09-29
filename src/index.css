@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: -0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
 }
@@ -13,7 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 20%;
+  margin: 0% 5%;
+  background-color: black;
 }
 
 code {

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import {useEffect, useState} from "react";
 import { Link, useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom';
+
 
 function Cuisine () {
   const [cusinine, setCuisine] = useState([]);
@@ -28,8 +28,7 @@ function Cuisine () {
     exit={{opacity:0}}
     transition={{duration:0.5}}
     >
-      {cuisine.map ((item) =>
-      {
+      {Cuisine.map ((item) =>{
         return (
           <Card key={item.id}> 
           <Link to= {'/recipe/'+item.id}> 

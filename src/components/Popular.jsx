@@ -36,9 +36,9 @@ const getPopular   = async () => {
   return (
     <div>
          <Wrapper>
-          <h3>Popular Picks</h3>
+          <h3>Trending Dishes</h3>
           <Splide options={{
-            perPage: 3,
+            perPage: 4,
             arrows: true,
             pagination: true, 
             drag: 'free',
@@ -86,7 +86,7 @@ img {
 p  {
   position: absolute;
   z-index:10;
-  left:5-%;
+  left:50%;
   bottom:0%;
   transform: translate (-50%, 0%);
   color: white;
@@ -110,4 +110,4 @@ height: 100%;
 background: linear-gradient(rgba (0,0,0,0), rgba (0,0,0,0.5))
 `;
 
-export default Popular
+export default Popular;
