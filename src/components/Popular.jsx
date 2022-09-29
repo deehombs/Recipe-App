@@ -37,7 +37,7 @@ const getPopular   = async () => {
          <Wrapper>
           <h3>Popular Picks</h3>
           <Splide options={{
-            perPage: 4,
+            perPage: 3,
             arrows: true,
             pagination: true, 
             drag: 'free',
@@ -49,7 +49,7 @@ const getPopular   = async () => {
               <SplideSlide key = {recipe.id}>
               <Card>
                 <p> {recipe.title}</p>
-                <img src={recipe.img} alt = {recipe.title}/>
+                <img src={recipe.image} alt = {recipe.title}/>
                 <Gradient/>
               </Card>
               </SplideSlide>

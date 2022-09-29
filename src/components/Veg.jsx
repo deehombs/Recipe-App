@@ -45,7 +45,7 @@ const getVeg   = async () => {
               <SplideSlide key = {recipe.id}>
               <Card>
                 <p> {recipe.title}</p>
-                <img src={recipe.img} alt = {recipe.title}/>
+                <img src={recipe.image} alt = {recipe.title}/>
                 <Gradient/>
               </Card>
               </SplideSlide>
@@ -62,6 +62,7 @@ margin: 4 rem 0rem;
 `;
 
 const Card = styled.div`
+
 min-height: 25rem;
 border-radius: 2rem;
 overflow: hidden;
@@ -74,12 +75,11 @@ img {
   width:100%;
   height:100%;
   object-fit: cover;
-
 }
 p  {
   position: absolute;
   z-index:10;
-  left:5-%;
+  left:50%;
   bottom:0%;
   transform: translate (-50%, 0%);
   color: white;
