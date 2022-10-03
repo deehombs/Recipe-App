@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom'
 
 
 function Cuisine () {
-  const [cusinine, setCuisine] = useState([]);
+  const [cuisine, setCuisine] = useState([]);
   let params = useParams();
 
   const getCuisine = async (name) => {
@@ -28,10 +28,10 @@ function Cuisine () {
     exit={{opacity:0}}
     transition={{duration:0.5}}
     >
-      {Cuisine.map ((item) =>{
+      {cuisine.map ((item) =>{
         return (
           <Card key={item.id}> 
-          <Link to= {'/recipe/'+item.id}> 
+          <Link to = {'/recipe/'+item.id}> 
           <img src={item.image} alt=""/>
           <h4>{item.title}</h4>
           </Link>

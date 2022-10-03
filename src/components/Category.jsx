@@ -48,12 +48,12 @@ const SLink = styled(NavLink)`
    transform: scale:0.8;
 
    h4 {
-      color: white;
+      color: black;
       font-size:0.8rem
    }
    
    svg {
-      color:white;
+      color:grey;
       font-size: 1.5rem;
    }
 
@@ -61,10 +61,10 @@ const SLink = styled(NavLink)`
       background:linear-gradient(to right, #f27121, #e94057);
    }
    svg {
-      color:white;
+      color:grey;
    }
    h4 {
-      color:white;
+      color:black;
    }
 `;
 export default Category

@@ -33,7 +33,7 @@ const getVeg   = async () => {
          <Wrapper>
           <h3>Trending Vegetarian Dishes</h3>
           <Splide options={{
-            perPage: ,
+            perPage: 3,
             arrows: true,
             pagination: true, 
             drag: 'free',
@@ -82,7 +82,8 @@ img {
 p  {
   position: absolute;
   z-index:10;
-  left:50%;
+  left:5%;
+  right:5%;
   bottom:0%;
   transform: translate (-50%, 0%);
   color: white;
