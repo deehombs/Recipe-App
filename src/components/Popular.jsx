@@ -90,7 +90,7 @@ p  {
   right:5%;
   bottom:0%;
   transform: translate (-50%, 0%);
-  color: white;
+  color: black;
   width:100%;
   text-align:centre;
   font-weight: 600;
