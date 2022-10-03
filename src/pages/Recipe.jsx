@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import React from 'react'
+import { BrowserRouter } from "react-router-dom";
 
 function Recipe () {
   
@@ -16,6 +17,7 @@ function Recipe () {
     console.log(detailData);
   };
   useEffect (()=>{
+    return ()
     fetchDetails ();
   }, [params.name]);
 
@@ -89,4 +91,4 @@ function Recipe () {
  const Info = styled.div`
  margin-left:10rem;
  `
-export default Recipe;
+export default Recipe;*/
